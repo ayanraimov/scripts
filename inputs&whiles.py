@@ -82,3 +82,20 @@ while activo == True:
     else:
         print(preguntokas)
 """
+
+
+cesta_productos = []
+cesta_cantidades = []
+cesta = {cesta_productos: cesta_cantidades}
+cliente_comprando = True
+while cliente_comprando == True:
+    producto = input("¿Qué quieres comprar?")
+    if producto != 'salir' or 's' or 'exit' or 'quit' 'Nada' or 'Nada más':
+        cesta_productos.append(producto)
+        cantidad_producto = int(input("¿Cuántas unidades quieres?"))
+        cesta_cantidades.append(cantidad_producto)
+        print(producto)
+    elif producto != 'salir' or 's' or 'exit' or 'quit' 'Nada' or 'Nada más':
+        cliente_comprando = False
+        print("Gracias por venir a comprar!")
+print(cesta)

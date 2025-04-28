@@ -83,7 +83,8 @@ while activo == True:
         print(preguntokas)
 """
 
-
+# Mierdon
+"""
 cesta_productos = []
 cesta_cantidades = []
 cesta = {cesta_productos: cesta_cantidades}
@@ -99,3 +100,41 @@ while cliente_comprando == True:
         cliente_comprando = False
         print("Gracias por venir a comprar!")
 print(cesta)
+"""
+
+"""
+prompt = "\nPlease enter the name of a city you have visited:"
+prompt += "\n(Enter 'quit' when you are finished.) "
+
+while True:
+    city = input(prompt)
+
+    if city == 'quit':
+     break
+    else:
+        print("I'd love to go to " + city.title() + "!")
+"""
+# Act 7-4
+"""
+prompt = "\nDime qué ingrediente quieres añadirle a tu pizza:"
+prompt += "\nPuedes salir poniendo 'salir'.\n"
+
+mensaje = ""
+
+while mensaje.lower() not in ['salir', 's', 'exit', 'quit', 'nada', 'nada más']:
+    mensaje = input(prompt)
+    print("Añadiendo " + mensaje.lower() + " a tu pizza.")
+    if mensaje in ['salir', 's', 'exit', 'quit', 'nada', 'nada más']:
+        print("Hasta la próxima!")
+"""
+
+
+# Act 7-5
+mensaje = int(input("Dime tu edad para determinar cuánto te va a costar la entrada:\n"))
+
+if mensaje < 3:
+    print("Tú entras gratis pequeñín!")
+elif mensaje <= 12:
+    print(" El tíquet te costaría 10€.")
+elif mensaje > 12:
+    print("El tíquet te costaría 15€.")

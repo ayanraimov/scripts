@@ -24,7 +24,7 @@ while multiplokas_10 != 'quit':
     else:
         print("No es múltiplo de 10 cachorro.")
 """
-
+"""
 nums_rango = list(range(1,31))
 nums_impares = list()
 nums_pares = list()
@@ -41,6 +41,8 @@ total_suma = 0
 for num in nums_impares:
     total_suma = total_suma + num
 print (total_suma)
+"""
+
 
 
 # prompt = "\nTell me something, and I will repeat it back to you:"
@@ -115,7 +117,8 @@ while True:
         print("I'd love to go to " + city.title() + "!")
 """
 # Act 7-4
-"""
+
+ingredientes = []
 prompt = "\nDime qué ingrediente quieres añadirle a tu pizza:"
 prompt += "\nPuedes salir poniendo 'salir'.\n"
 
@@ -123,10 +126,30 @@ mensaje = ""
 
 while mensaje.lower() not in ['salir', 's', 'exit', 'quit', 'nada', 'nada más']:
     mensaje = input(prompt)
-    print("Añadiendo " + mensaje.lower() + " a tu pizza.")
-    if mensaje in ['salir', 's', 'exit', 'quit', 'nada', 'nada más']:
+    if mensaje.lower() in ['salir', 's', 'exit', 'quit', 'nada', 'nada más']:
         print("Hasta la próxima!")
-"""
+        break
+    elif mensaje.strip() != "" and mensaje.isalpha() and mensaje not in ingredientes:
+        ingredientes.append(mensaje)
+        print(f"\nAñadiendo {mensaje.lower()} a tu pizza...\n")
+    else:
+        print("Por favor, añade un ingrediente que sea válido")
+
+
+
+activo = True
+
+while activo:
+    confirmacion = input(f"Los ingredientes de tu pizza son los siguientes: {ingredientes}\n\t¿Quieres confirmar tu elección (s/n)?")
+
+    if confirmacion.lower() == "s":
+        print("Aquí tienes tu pizza!")
+        activo = False
+    elif confirmacion.lower() == "n":
+        print("Es una pena, vuelve pronto!")
+        activo = False
+    else:
+        print("Por favor, pon una respuesta válida.")
 
 # Act 7-5
 """
@@ -158,6 +181,9 @@ while respuesta != 'quit':
 
 
 # Act 7-7
+"""
 x = 10
 while x != 0:
     print(x)
+"""
+

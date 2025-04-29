@@ -128,8 +128,8 @@ while mensaje.lower() not in ['salir', 's', 'exit', 'quit', 'nada', 'nada más']
         print("Hasta la próxima!")
 """
 
-
 # Act 7-5
+"""
 mensaje = int(input("Dime tu edad para determinar cuánto te va a costar la entrada:\n"))
 
 if mensaje < 3:
@@ -138,3 +138,26 @@ elif mensaje <= 12:
     print(" El tíquet te costaría 10€.")
 elif mensaje > 12:
     print("El tíquet te costaría 15€.")
+"""
+
+
+
+# Act 7-6
+"""
+respuesta = ""
+estado = True
+while respuesta != 'quit':
+    respuesta = input("¿Q pasa maquina?")
+    if respuesta == 'quit':
+        estado = False
+        print("Adios!")
+        break
+    else:
+        print("Dime 'quit' coño")
+"""
+
+
+# Act 7-7
+x = 10
+while x != 0:
+    print(x)

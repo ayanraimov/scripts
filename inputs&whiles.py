@@ -117,7 +117,7 @@ while True:
         print("I'd love to go to " + city.title() + "!")
 """
 # Act 7-4
-
+"""
 ingredientes = []
 prompt = "\nDime qué ingrediente quieres añadirle a tu pizza:"
 prompt += "\nPuedes salir poniendo 'salir'.\n"
@@ -150,6 +150,8 @@ while activo:
         activo = False
     else:
         print("Por favor, pon una respuesta válida.")
+"""
+
 
 # Act 7-5
 """
@@ -187,3 +189,36 @@ while x != 0:
     print(x)
 """
 
+"""
+usuarios_no_verificados = ['David', 'Daniil', 'Didi', 'Marc', 'Xisco', 'Ayan']
+usuarios_verificados = []
+
+while usuarios_no_verificados:
+    actual_usuario = usuarios_no_verificados.pop()
+    print(f"Verificando a {actual_usuario}...")
+    usuarios_verificados.append(actual_usuario)
+
+print(f"\nAquí tienes la lista de los usuarios no verificados:\n\t{usuarios_no_verificados}")
+print(f"\nY aquí tienes la lista de los usuarios verificados:\n\t{usuarios_verificados}")
+"""
+
+personas = {}
+
+encuesta_activa = True
+
+
+
+while encuesta_activa:
+    nombre = input("¿Cómo te llamas?\n")
+    edad = int(input("Qué edad tienes\n"))
+
+    personas[nombre] = edad
+
+    repetir = input("¿Quieres que otra persona responda?\n")
+    if repetir.lower() == 'no':
+        encuesta_activa = False
+
+#print(f"Esta es la gente que ha participado en la encuesta y su edad: {personas}")
+
+for nombre, edad in personas.items():
+    print(f"{nombre.title()} tiene {edad} años.")

@@ -20,7 +20,6 @@ while True:
 """
 
 # Cabra
-"""
 def nombre_completo():
     while True:
         print("Para salir, pon 'q'\n")
@@ -32,5 +31,4 @@ def nombre_completo():
             break
         nombre_y_apellido = (f"{nombre.title()} {apellido.title()}")
         print(f"\nHola, {nombre_y_apellido}")
-"""
 

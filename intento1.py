@@ -172,3 +172,7 @@ def crear_sandwich():
 
 
 crear_sandwich()
+
+from corrigiendo_al_libro import nombre_completo as full
+
+full()

@@ -65,3 +65,32 @@ daniil.update_login_att(3)
 daniil.increment_login_attempts(3)
 daniil.increment_login_attempts(1)
 daniil.restart_attempts()
+
+class Admin(User):
+    def __init__(self, f_name, l_name, has_privileges = True):
+        super().__init__(f_name, l_name)
+        self.privileges = privileges(has_privileges)
+        
+class privileges():
+    def __init__(self, has_privileges = True):
+        if not has_privileges:
+            self.ban_users = False
+            self.add_users = False
+            print("This admin doesn't have admin's privileges yet.")
+    def show_privileges(self):
+        print(f"Here are the permits status of this user: \nBan Users: {self.ban_users}\nAdd Users: {self.add_users}")
+    def set_privileges(self, has_privileges):  # Nuevo método para modificar privilegios
+        self.ban_users = has_privileges
+        self.add_users = has_privileges
+        if not has_privileges:
+            print("Privileges have been revoked.")
+        else:
+            print("Privileges have been granted.")
+
+ayan = Admin('Ayan', 'Ronaldo', has_privileges=False)
+ayan.description()
+ayan.update_login_att(7)
+ayan.increment_login_attempts(0)
+ayan.privileges.show_privileges()
+ayan.privileges.set_privileges(True)
+ayan.privileges.show_privileges()

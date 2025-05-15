@@ -176,3 +176,15 @@ crear_sandwich()
 from corrigiendo_al_libro import nombre_completo as full
 
 full()
+
+class cocinar():
+    def __init__(self, username, name, last_name):
+        self.username = username
+        self.name = name
+        self.last_name = last_name
+        self.login_attempts = 0
+        print(f"Username: {self.username.lower()}\nName: {self.name.title()}\nLast name: {self.last_name.title()}")
+    def login_attempts(self, attempts):
+        self.login_attempts += attempts
+    def reset_attempts(self):
+        self.login_attempts = 0

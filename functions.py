@@ -18,6 +18,7 @@ def sandrokas():
 sandrokas()
 """
 
+"""
 try:
     number_1 = int(input("Dime un número:\n"))
 except ValueError:
@@ -27,6 +28,8 @@ try:
     number_2 = int(input("\nPon otro número, y así lo sumamos con el anterior:\n"))
 except ValueError:
     print("Pon un número, por favor")
+"""
+
 
 """
 def sumardosnumeros():
@@ -50,7 +53,7 @@ def sumardosnumeros():
     print(f"\nEl resultado es: {suma}")
 """
 
-
+"""
 def sumardosnumeros():
     while True:
         try:
@@ -72,8 +75,10 @@ def sumardosnumeros():
     print(f"\nEl resultado es: {suma}")
 
 sumardosnumeros()
+"""
 
 
+"""
 import json
 def get_stored_username():
     filename = 'username.json'
@@ -101,3 +106,36 @@ def greet_user():
         print("We'll remember you when you come back, " + username + "!")
 
 greet_user()
+"""
+
+
+
+def count(s):
+    lista_caracteres = {}
+    for char in s:
+        if char in lista_caracteres:
+            lista_caracteres[char] += 1
+        else:
+            lista_caracteres[char] = 1
+    return lista_caracteres
+
+def max_sequence(arr):
+    if not arr: 
+        return 0
+    
+    suma_maxima = 0  
+    suma_actual = 0
+
+    for numero in arr:
+        if numero > suma_actual + numero:
+            suma_actual = numero
+        else:
+            suma_actual = suma_actual + numero
+            
+        if suma_actual > suma_maxima:
+            suma_maxima = suma_actual
+
+    return suma_maxima
+
+max_sequence([-2, 1, -3, 4, -1, 2, 1, -5, 4])
+

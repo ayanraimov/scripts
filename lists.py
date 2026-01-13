@@ -193,10 +193,3 @@ menu_buffet = ('bocata lomo', 'paella', 'macarrones', 'mariscada', 'albondigas')
 for platos in menu_buffet:
     print(platos)
 
-#coña
-crazy_question = input("If you had to choose between YoungBoy (1) and your girlfriend (2), who would you choose (1/2)? ")
-if crazy_question == "1":
-    print("YoungBoy! Fuck that bitch!")
-else:
-    print("Nahh I'm not real")
-
